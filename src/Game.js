@@ -5,8 +5,8 @@ export default class Game { // skapar klassen
         this.width = width
         this.height = height
         console.log("ny instans av game", this.width)
-        this.box = new GameObject(40, 100, 200, 200, "purple", 1)
-        this.box2 = new GameObject(600, 100, 200, 200, "purple", -1)
+        this.box = new GameObject(0, 0, 200, 200, "purple", 1)
+        this.box2 = new GameObject(654, 200, 200, 200, "green", -1)
     }
 
     update(deltaTime) {
