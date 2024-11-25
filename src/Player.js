@@ -91,8 +91,8 @@ export default class Player extends GameObject {
             this.frameY = 6
             this.frameX = 2
         }
-
     }
+    
     draw(ctx) {
         if (this.flip) {
             ctx.save()

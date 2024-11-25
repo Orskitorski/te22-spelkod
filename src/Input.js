@@ -4,7 +4,6 @@ export default class Input {
         this.keys = new Set()
 
         window.addEventListener("keydown", (event) => {
-            console.log(event.key)
             this.keys.add(event.key)
         })
 
@@ -13,8 +12,7 @@ export default class Input {
         })
 
         window.addEventListener("mousemove", (event) => {
-            console.log("x: " + event.offsetX, "y: " + event.offsetY)
-            console.log()
+
         })
     }
 }
