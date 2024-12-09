@@ -23,8 +23,6 @@ export default class Player extends GameObject {
         this.maxSpeedX = speed
         this.speedY = 0
         this.maxSpeedY = speed
-
-
     }
 
     update(deltaTime) {
