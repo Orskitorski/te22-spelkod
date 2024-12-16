@@ -27,3 +27,25 @@ Att göra det.
 
 ## Vad åstadkom jag?
 En grund till hur jag ska lyckas rita ut olika bakgrunder och karaktärer + en textruta med text som skapas och ritas ut
+
+
+# 2024-12-16
+## Vad gjorde jag sist?
+Gjorde en början till hur jag ska lyckas rita ut olika bakgrunder beroende på scenen och ritade ut text.
+
+## Vad ska jag göra idag?
+Försöka göra input (knappar med val för att komma fram i spelet)
+
+## Hinder? 
+Ingenting just nu.
+
+## Status
+Har lyckats rita ut allting som behövs förutom knappar för spelarval. Behöver knappar + fixa logiken för spelloopen.
+
+## Prioritet
+1. Fixa knappar.
+2. Fixa spellogiken.
+3. Skriva dialog.
+
+## Vad åstadkom jag?
+Knappar + hann börja tänka på hur spelets logik ska fungera

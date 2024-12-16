@@ -1,34 +1,32 @@
-let scenes = [
-    {
-        id: "Bedroom",
-        description: "You are in your bedroom",
-        choices: [
+export default class Scenes {
+    constructor(game) {
+        this.game = game
+        const scene = [
             {
-                description: "Date Rudolf",
-                target: 1
+                id: 1,
+                speaker: "Rudolf",
+                description: "You are in Rudolfs bedroom",
+                choices: [
+                    {
+                        description: "Go to cafe",
+                        target: 2
+                    },
+                    {
+                        description: "Talk",
+                        target: 1
+                    }
+                ]
             },
             {
-                description: "Date Krampus",
-                target: 2
-            }
-        ]
-    },
-    {
-        id: "Rudolf",
-        description: "You are at Rudolf",
-        choices: [
-            {
-                description: "Ask him what his favourite snack is"
-            }
-        ]
-    },
-    {
-        id: "Krampus",
-        description: "You are at Krampus",
-        choices: [
-            {
-                description: "Ask him what his favourite snack is"
-            }
+                id: 2,
+                speaker: "Rudolf",
+                description: "You are at cafe",
+                choices: [
+                    {
+                        description: "Ask him what his favourite snack is"
+                    }
+                ]
+            },
         ]
     }
-]
+}

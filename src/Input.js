@@ -14,5 +14,7 @@ export default class Input {
         window.addEventListener("mousemove", (event) => {
 
         })
+
+        
     }
 }

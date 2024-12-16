@@ -1,4 +1,3 @@
-
 export default class Dialogue {
     constructor (game) {
         this.game = game
