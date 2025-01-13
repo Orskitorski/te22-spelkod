@@ -1,7 +1,7 @@
 export default class Scenes {
     constructor(game) {
         this.game = game
-        const scene = [
+        this.scenes = [
             {
                 id: 1,
                 speaker: "Rudolf",
@@ -23,10 +23,16 @@ export default class Scenes {
                 description: "You are at cafe",
                 choices: [
                     {
-                        description: "Ask him what his favourite snack is"
+                        description: "Go to the bedroom ~",
+                        target: 1
+                    },
+                    {
+                        description: "Ask him what his favourite snack is",
+                        target: 2
                     }
                 ]
             },
         ]
+        this.activeScene = 0
     }
 }

@@ -19,7 +19,7 @@ export default class Game { // skapar klassen
         this.background = new Background(this)
         this.character = new Character(this)
         this.dialogue = new Dialogue(this)
-        this.buttons = new Buttons(this, this.sceneManager, this.background)
+        this.buttons = new Buttons(this, this.sceneManager, this.background, this.dialogue, this.scenes)
         this.dialogue.create('Rudolf:', 'Hej, jag heter Rudolf, men du kan kalla mig "Röda Mulen" om du vill ;) <3')
         this.buttons.create()
     }

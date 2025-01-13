@@ -4,17 +4,22 @@ export default class Dialogue {
         this.canvas = this.game.canvas
         this.x = 0
         this.y = 0
+        this.dialogue = document.createElement("p")
+        this.character = document.createElement("p")
     }
 
     create(speaker, text) {
         const box = document.createElement("div")
         box.classList.add("textBox")
-        const character = document.createElement("p")
-        const dialogue = document.createElement("p")
-        dialogue.textContent = text
-        character.textContent = speaker
-        box.appendChild(character)
-        box.appendChild(dialogue)
+        this.dialogue.textContent = text
+        this.character.textContent = speaker
+        box.appendChild(this.character)
+        box.appendChild(this.dialogue)
         this.canvas.parentNode.appendChild(box)
+    }
+
+    change(speaker, text) {
+        this.dialogue.textContent = text
+        this.character.textContent = speaker
     }
 }
