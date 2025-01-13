@@ -1,38 +1,32 @@
-export default class Scenes {
-    constructor(game) {
-        this.game = game
-        this.scenes = [
+export const scenes = [
+    {
+        id: 1,
+        speaker: "Rudolf:",
+        description: "Welcome to my bedroom!",
+        choices: [
             {
-                id: 1,
-                speaker: "Rudolf",
-                description: "You are in Rudolfs bedroom",
-                choices: [
-                    {
-                        description: "Go to cafe",
-                        target: 2
-                    },
-                    {
-                        description: "Talk",
-                        target: 1
-                    }
-                ]
+                description: "Go to cafe",
+                target: 2
             },
             {
-                id: 2,
-                speaker: "Rudolf",
-                description: "You are at cafe",
-                choices: [
-                    {
-                        description: "Go to the bedroom ~",
-                        target: 1
-                    },
-                    {
-                        description: "Ask him what his favourite snack is",
-                        target: 2
-                    }
-                ]
-            },
+                description: "Talk",
+                target: 1
+            }
         ]
-        this.activeScene = 0
-    }
-}
+    },
+    {
+        id: 2,
+        speaker: "Rudolf:",
+        description: "We are at the cafe",
+        choices: [
+            {
+                description: "Go to the bedroom ~",
+                target: 1
+            },
+            {
+                description: "Talk",
+                target: 2
+            }
+        ]
+    },
+]

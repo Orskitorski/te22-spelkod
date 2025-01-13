@@ -1,5 +1,4 @@
 import Layer from './Layer'
-import Input from './Input'
 
 export default class Background {
     constructor(game) {

@@ -1,5 +1,4 @@
 import Input from "./Input.js"
-import Scenes from "./scenes.js"
 import SceneManager from "./SceneManager.js"
 import Background from "./Background.js"
 import Character from "./Character.js"
@@ -14,14 +13,13 @@ export default class Game { // skapar klassen
         this.input = new Input(this)
         
         console.log("ny instans av game", this.width)
-        this.scenes = new Scenes(this)
-        this.sceneManager = new SceneManager(this, this.scenes)
+        this.sceneManager = new SceneManager(this)
         this.background = new Background(this)
         this.character = new Character(this)
         this.dialogue = new Dialogue(this)
-        this.buttons = new Buttons(this, this.sceneManager, this.background, this.dialogue, this.scenes)
-        this.dialogue.create('Rudolf:', 'Hej, jag heter Rudolf, men du kan kalla mig "Röda Mulen" om du vill ;) <3')
-        this.buttons.create()
+        this.buttons = new Buttons(this)
+        this.dialogue.create(this.sceneManager.activeScene)
+        this.buttons.create(this.sceneManager.activeScene)
     }
 
     update(deltaTime) {
