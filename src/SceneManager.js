@@ -15,7 +15,6 @@ export default class SceneManager {
 
     get() {
         return this.scenes.find(scene => scene.id === this.activeSceneId)
-
     }
 
 }

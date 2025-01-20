@@ -7,11 +7,12 @@ export default class Dialogue {
         this.box = document.createElement("div")
         this.dialogue = document.createElement("p")
         this.character = document.createElement("p")
+        this.dialogueIndex = 0
     }
 
     create(scene) {
         this.box.classList.add("textBox")
-        this.dialogue.textContent = scene.description
+        this.dialogue.textContent = scene.dialogue[this.dialogueIndex]
         this.character.textContent = scene.speaker
         this.box.appendChild(this.character)
         this.box.appendChild(this.dialogue)
@@ -19,7 +20,10 @@ export default class Dialogue {
     }
 
     change() {
-        this.dialogue.textContent = this.game.sceneManager.activeScene.description
+        if (this.dialogueIndex < (this.game.sceneManager.activeScene.dialogue.length)-1) {
+            this.dialogueIndex++
+        }
+        this.dialogue.textContent = this.game.sceneManager.activeScene.dialogue[this.dialogueIndex]
         this.character.textContent = this.game.sceneManager.activeScene.speaker
     }
 }
