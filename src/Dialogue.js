@@ -19,9 +19,12 @@ export default class Dialogue {
         this.canvas.parentNode.appendChild(this.box)
     }
 
-    change() {
-        if (this.dialogueIndex < (this.game.sceneManager.activeScene.dialogue.length)-1) {
+    change(buttonTarget, proceedDialogue) {
+        if (this.dialogueIndex < (this.game.sceneManager.activeScene.dialogue.length)-1 && proceedDialogue) {
             this.dialogueIndex++
+        }
+        else if (!proceedDialogue) {
+            this.dialogueIndex = 0
         }
         this.dialogue.textContent = this.game.sceneManager.activeScene.dialogue[this.dialogueIndex]
         this.character.textContent = this.game.sceneManager.activeScene.speaker

@@ -16,7 +16,6 @@ export default class Buttons{
             this.choiceButton.addEventListener("click", () => {
                 this.game.sceneManager.change(element.target)
                 this.game.background.change(element.target)
-                this.game.dialogue.change()
                 this.change(this.game.sceneManager.activeScene)
             })
             this.box.appendChild(this.choiceButton)
@@ -36,7 +35,6 @@ export default class Buttons{
             this.choiceButton.addEventListener("click", () => {
                 this.game.sceneManager.change(element.target)
                 this.game.background.change(element.target)
-                this.game.dialogue.change()
                 this.change(this.game.sceneManager.activeScene)
             })
             this.box.appendChild(this.choiceButton)

@@ -10,12 +10,10 @@ export const scenes = [
             {
                 description: "Go to cafe",
                 target: 2,
-                dialogueReset: true
             },
             {
                 description: "Talk",
                 target: 1,
-                dialogueReset: false
             }
         ]
     },
@@ -23,17 +21,15 @@ export const scenes = [
         id: 2,
         speaker: "Rudolf:",
         description: "We are at the cafe",
-        dialogue: ["This is the local cafe, it's very cozy!", "Oh, you like my room? Thanks!", "Wanna sex?"],
+        dialogue: ["This is the local cafe, it's very cozy!", "HJAHjhejaeehj", "Wanna sex?"],
         choices: [
             {
                 description: "Go to the bedroom ~",
                 target: 1,
-                dialogueReset: true
             },
             {
                 description: "Talk",
                 target: 2,
-                dialogueReset: false
             }
         ]
     },

@@ -31,6 +31,8 @@ export default class Background {
             new Layer(this.game, this.width, this.height, 0, this.bg, 0, 0),
         ]
     }
+    
+    
 
     update(deltaTime) {
         this.backgroundLayers.forEach(layer => {
