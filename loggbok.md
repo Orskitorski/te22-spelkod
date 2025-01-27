@@ -49,3 +49,12 @@ Har lyckats rita ut allting som behövs förutom knappar för spelarval. Behöve
 
 ## Vad åstadkom jag?
 Knappar + hann börja tänka på hur spelets logik ska fungera
+
+# 2025-01-27
+
+## Vad åstadkom jag?
+fungerande dialog som resettas när man byter scener + ending
+
+## Vad ska jag göra nästa gång?
+Fler dialogval
+knapparna ska försvinna när man fått en ending

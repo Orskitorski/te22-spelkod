@@ -40,4 +40,11 @@ export default class Buttons{
             this.box.appendChild(this.choiceButton)
         })
     }
+
+    remove() {
+        console.log("fuhseh")
+        while (this.box.hasChildNodes()) {
+            this.box.removeChild(this.box.firstChild)
+        }
+    }
 }

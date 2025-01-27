@@ -14,6 +14,10 @@ export const scenes = [
             {
                 description: "Talk",
                 target: 1,
+            },
+            {
+                description: "Talk2",
+                target: 1,
             }
         ]
     },

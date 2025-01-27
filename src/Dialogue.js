@@ -20,13 +20,21 @@ export default class Dialogue {
     }
 
     change(buttonTarget, proceedDialogue) {
-        if (this.dialogueIndex < (this.game.sceneManager.activeScene.dialogue.length)-1 && proceedDialogue) {
+        if (proceedDialogue) {
             this.dialogueIndex++
+            this.dialogue.textContent = this.game.sceneManager.activeScene.dialogue[this.dialogueIndex]
+            this.character.textContent = this.game.sceneManager.activeScene.speaker
         }
         else if (!proceedDialogue) {
             this.dialogueIndex = 0
+            this.dialogue.textContent = this.game.sceneManager.activeScene.dialogue[this.dialogueIndex]
+            this.character.textContent = this.game.sceneManager.activeScene.speaker
         }
-        this.dialogue.textContent = this.game.sceneManager.activeScene.dialogue[this.dialogueIndex]
-        this.character.textContent = this.game.sceneManager.activeScene.speaker
+        
+        if (this.dialogueIndex > (this.game.sceneManager.activeScene.dialogue.length)-1 && proceedDialogue) {
+            this.dialogue.textContent = "Sex Ending"
+            this.character.textContent = ""
+            this.game.buttons.remove()
+        }
     }
 }
