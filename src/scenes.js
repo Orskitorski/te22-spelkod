@@ -1,5 +1,3 @@
-import Dialogue from "./Dialogue";
-
 export const scenes = [
     {
         id: 1,

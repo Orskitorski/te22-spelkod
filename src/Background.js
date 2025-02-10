@@ -8,9 +8,9 @@ export default class Background {
 
         
         this.bedroom = new Image()
-        this.bedroom.src = "src/assets/bedroom_background.png"
+        this.bedroom.src = "/images/bedroom_background.png"
         this.cafe = new Image()
-        this.cafe.src = "src/assets/cafe_background.png"
+        this.cafe.src = "/images/cafe_background.png"
 
         this.bg = this.bedroom
 
