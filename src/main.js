@@ -1,5 +1,5 @@
 import './style.css'
-import { setup } from './src/setup.js'
+import { setup } from './setup.js'
 
 const canvas = document.querySelector('#game')
 setup(canvas)
