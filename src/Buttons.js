@@ -42,7 +42,6 @@ export default class Buttons{
     }
 
     remove() {
-        console.log("fuhseh")
         while (this.box.hasChildNodes()) {
             this.box.removeChild(this.box.firstChild)
         }
