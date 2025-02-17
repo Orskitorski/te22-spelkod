@@ -32,7 +32,7 @@ export default class Dialogue {
         }
         
         if (this.dialogueIndex > (this.game.sceneManager.activeScene.dialogue.length)-1 && proceedDialogue) {
-            this.dialogue.textContent = "Sex Ending"
+            this.dialogue.textContent = "Love Ending"
             this.character.textContent = ""
             this.game.buttons.remove()
         }
