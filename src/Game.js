@@ -22,7 +22,7 @@ export default class Game { // skapar klassen
     }
 
     update(deltaTime) {
-
+        
     }
 
     draw(ctx) {

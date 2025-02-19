@@ -21,6 +21,7 @@ export default class Buttons{
                 this.game.sceneManager.change(element.target)
                 this.game.background.change(element.target)
                 this.change(this.game.sceneManager.activeScene)
+                this.remove()
             })
             this.box.appendChild(this.choiceButton)
         })

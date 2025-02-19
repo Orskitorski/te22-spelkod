@@ -12,17 +12,15 @@ export default class Dialogue {
 
     create(scene) {
         this.box.classList.add("textBox")
-        this.dialogue.textContent = scene.dialogue[this.dialogueIndex]
-        this.character.textContent = scene.speaker
+        this.dialogue.textContent = scene.dialogue[this.dialogueIndex].text
+        this.character.textContent = scene.dialogue[this.dialogueIndex].speaker
         this.box.appendChild(this.character)
         this.box.appendChild(this.dialogue)
         this.canvas.parentNode.appendChild(this.box)
     }
 
     change(proceedDialogue) {
-        this.game.buttons.remove()
-
-        if (proceedDialogue && this.dialogueIndex < 2) {
+        if (proceedDialogue && this.dialogueIndex < (this.game.sceneManager.activeScene.dialogue).length-1) {
             this.dialogueIndex++
         } 
         else if (proceedDialogue == false) {
@@ -32,7 +30,7 @@ export default class Dialogue {
             this.game.buttons.change(this.game.sceneManager.activeScene)
         }
 
-        this.dialogue.textContent = this.game.sceneManager.activeScene.dialogue[this.dialogueIndex]
-        this.character.textContent = this.game.sceneManager.activeScene.speaker
+        this.dialogue.textContent = this.game.sceneManager.activeScene.dialogue[this.dialogueIndex].text
+        this.character.textContent = this.game.sceneManager.activeScene.dialogue[this.dialogueIndex].speaker
     }
 }
