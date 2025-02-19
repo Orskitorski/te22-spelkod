@@ -9,14 +9,10 @@ export default class SceneManager {
     }
 
     change(id) {
-        if (id == this.activeSceneId) {
-            this.game.dialogue.change(id, true)
-        }
-        else {
-            this.activeSceneId = id
-            this.activeScene = this.get()
-            this.game.dialogue.change(id, false)
-        }
+        this.activeSceneId = id
+        this.activeScene = this.get()
+        this.game.dialogue.change(false)
+        this.game.background.change(this.activeScene)
     }
 
     get() {

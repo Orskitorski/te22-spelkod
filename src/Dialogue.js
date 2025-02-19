@@ -19,22 +19,20 @@ export default class Dialogue {
         this.canvas.parentNode.appendChild(this.box)
     }
 
-    change(buttonTarget, proceedDialogue) {
-        if (proceedDialogue) {
+    change(proceedDialogue) {
+        this.game.buttons.remove()
+
+        if (proceedDialogue && this.dialogueIndex < 2) {
             this.dialogueIndex++
-            this.dialogue.textContent = this.game.sceneManager.activeScene.dialogue[this.dialogueIndex]
-            this.character.textContent = this.game.sceneManager.activeScene.speaker
-        }
-        else if (!proceedDialogue) {
+        } 
+        else if (proceedDialogue == false) {
             this.dialogueIndex = 0
-            this.dialogue.textContent = this.game.sceneManager.activeScene.dialogue[this.dialogueIndex]
-            this.character.textContent = this.game.sceneManager.activeScene.speaker
         }
-        
-        if (this.dialogueIndex > (this.game.sceneManager.activeScene.dialogue.length)-1 && proceedDialogue) {
-            this.dialogue.textContent = "Love Ending"
-            this.character.textContent = ""
-            this.game.buttons.remove()
+        else {
+            this.game.buttons.change(this.game.sceneManager.activeScene)
         }
+
+        this.dialogue.textContent = this.game.sceneManager.activeScene.dialogue[this.dialogueIndex]
+        this.character.textContent = this.game.sceneManager.activeScene.speaker
     }
 }

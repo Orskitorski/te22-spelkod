@@ -7,12 +7,9 @@ export default class Background {
         this.height = 720
 
         
-        this.bedroom = new Image()
-        this.bedroom.src = "./images/bedroom_background.png"
-        this.cafe = new Image()
-        this.cafe.src = "./images/cafe_background.png"
-
-        this.bg = this.bedroom
+        this.bg = new Image()
+        console.log(this.game.sceneManager.activeScene)
+        this.bg.src = this.game.sceneManager.activeScene.background
 
         this.backgroundLayers = [
             new Layer(this.game, this.width, this.height, 0, this.bg, 0, 0),
@@ -20,13 +17,7 @@ export default class Background {
     }
 
     change(scene) {
-        if (scene == 1) {
-            this.bg = this.bedroom
-        }
-        else if (scene == 2) {
-            this.bg = this.cafe
-        }
-
+        this.bg.src = this.game.sceneManager.activeScene.background
         this.backgroundLayers = [
             new Layer(this.game, this.width, this.height, 0, this.bg, 0, 0),
         ]

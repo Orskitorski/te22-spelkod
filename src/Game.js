@@ -18,12 +18,11 @@ export default class Game { // skapar klassen
         this.character = new Character(this)
         this.dialogue = new Dialogue(this)
         this.buttons = new Buttons(this)
-        this.dialogue.create(this.sceneManager.activeScene)
-        this.buttons.create(this.sceneManager.activeScene)
+        this.dialogue.create(this.sceneManager.activeScene)  
     }
 
     update(deltaTime) {
-        
+
     }
 
     draw(ctx) {

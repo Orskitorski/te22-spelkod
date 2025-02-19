@@ -3,6 +3,8 @@ export default class Input {
         this.game = game
         this.keys = new Set()
 
+        console.log(this.game.canvas)
+
         window.addEventListener("keydown", (event) => {
             this.keys.add(event.key)
         })
@@ -11,10 +13,8 @@ export default class Input {
             this.keys.delete(event.key)
         })
 
-        window.addEventListener("mousemove", (event) => {
-
+        this.game.canvas.addEventListener("click", (event) => {
+            this.game.dialogue.change(true)
         })
-
-        
     }
 }
