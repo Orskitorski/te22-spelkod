@@ -13,6 +13,7 @@ export default class SceneManager {
         this.activeScene = this.get()
         this.game.dialogue.change(false)
         this.game.background.change(this.activeScene)
+        this.game.character.change(this.activeScene)
     }
 
     get() {

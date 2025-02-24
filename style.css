@@ -30,16 +30,17 @@ canvas {
 }
 
 .choiceBox {
-  text-align: right;
+  text-align: center;
   z-index: 1;
   position: absolute;
   bottom: 30%;
-  right: 2.5rem;
+  left: 3rem;
   line-height: normal;
-  max-width: 9rem;
+  max-width: 12rem;
 
   button {
     margin-top: 3%;
+    width: 15rem;
   }
 }
 
